@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas֡</title>
+    <style>
+      *{padding: 0;margin: 0;}
+    </style>
+  </head>
+  <body>
+    <div style="background-color: #000">
+      <canvas id="animate"></canvas>
+    </div>
+    <script src="js/frame.js"></script>
+    <script>
+      // 以下参数中带*必须填写
+      const frame = new SequenceFrame({
+        id: '#animate', //*DOM节点
+        width: 1055, //*canvas高度
+        height: 250, //*canvas宽度
+        firstImg: 'image/bottom-skip/animate_01.png', //*默认显示图片
+        total: 50, //*总帧数
+        speed: 55, //*绘制的间隔时间
+        loop: true, //是否循环
+        autoplay: true, //图片加载完后是否播放(默认为true)
+        imgType: '.png', //图片类型
+      });
+    </script>
+  </body>
+</html>
